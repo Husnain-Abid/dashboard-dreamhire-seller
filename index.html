@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+
+                <ul class="nav-list logo-nav ">
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <img src="asset/logo.png" alt="logo">
+                        </a>
+                    </li>
+                </ul>
+
+
+                <ul class="nav-list">
+                    <li class="nav-item active" data-tab="home">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="orders">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-th"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="gigs">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-heart"></i>
+                            <span>Gigs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="reviews">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-comment"></i>
+                            <span>Reviews</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="refunds">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Refunds</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="portfolio">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="payouts">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Payouts</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav-list bottom-nav ">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-power-off"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+            </nav>
+        </div>
+
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div class="nav-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search" class="search-input">
+                    </div>
+                </div>
+
+                <div class="nav-right">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+
+                    <div class="language-selector">
+                        <div class="flag">
+                            <img src="asset/flag.png" alt="UK Flag">
+                        </div>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="user-profile">
+                        <div class="avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User Avatar">
+                        </div>
+                        <div class="user-info">
+                            <div class="user-name">Moni Roy</div>
+                            <div class="user-role">Admin</div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+
+            <div class="content-area">
+
+
+                <!-- Home Tab Content -->
+                <div class="tab-content active" id="home-content">
+
+                    <!-- Header Component -->
+                    <div class="header-section">
+                        <div class="welcome-info">
+                            <h1>Welcome back, new desktop!</h1>
+                            <div class="user-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span class="amount">$89,000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-id-card"></i>
+                                    <span>Member since September 30, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">Switch to buying</button>
+                            <button class="btn btn-primary">Create a new gig</button>
+                        </div>
+                    </div>
+
+                    <!-- stats grid -->
+                    <div class="stats-grid">
+                        <!-- First row -->
+                        <div class="stat-card">
+                            <div class="card-content">
+                                <div class="card-info">
+                                    <h3>Total Gigs</h3>
+                                    <div class="value">1042</div>
+                                    <div class="change increase">
+                                        <i class="fas fa-arrow-up"></i>
+                                        8.5% Up from yesterday
+                                    </div>
+                                </div>
+                                <div class="card-icon purple">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="card-content">
+                                <div class="card-info">
+                                    <h3>Total Order</h3>
+                                    <div class="value">10293</div>
+                                    <div class="change increase">
+                                        <i class="fas fa-arrow-up"></i>
+                                        1.3% Up from past week
+                                    </div>
+                                </div>
+                                <div class="card-icon yellow">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="card-content">
+                                <div class="card-info">
+                                    <h3>Earnings</h3>
+                                    <div class="value">$89,000</div>
+                                    <div class="change decrease">
+                                        <i class="fas fa-arrow-down"></i>
+                                        4.3% Down from yesterday
+                                    </div>
+                                </div>
+                                <div class="card-icon green">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="card-content">
+                                <div class="card-info">
+                                    <h3>Total Pending</h3>
+                                    <div class="value">20</div>
+                                    <div class="change increase">
+                                        <i class="fas fa-arrow-up"></i>
+                                        1.8% Up from yesterday
+                                    </div>
+                                </div>
+                                <div class="card-icon orange">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second row -->
+                        <div class="stat-card">
+                            <div class="card-content">
+                                <div class="card-info">
+                                    <h3>Awarded projects</h3>
+                                    <div class="value">24</div>
+                                    <div class="change increase">
+                                        <i class="fas fa-arrow-up"></i>
+                                        8.5% Up from yesterday
+                                    </div>
+                                </div>
+                                <div class="card-icon pink">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="card-content">
+                                <div class="card-info">
+                                    <h3>Cancelled Order</h3>
+                                    <div class="value">5</div>
+                                    <div class="change increase">
+                                        <i class="fas fa-arrow-up"></i>
+                                        1.3% Up from past week
+                                    </div>
+                                </div>
+                                <div class="card-icon cyan">
+                                    <i class="fas fa-ban"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="card-content">
+                                <div class="card-info">
+                                    <h3>Total Reach</h3>
+                                    <div class="value">534</div>
+                                    <div class="change decrease">
+                                        <i class="fas fa-arrow-down"></i>
+                                        4.3% Down from yesterday
+                                    </div>
+                                </div>
+                                <div class="card-icon light-green">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="card-content">
+                                <div class="card-info">
+                                    <h3>Under Progress</h3>
+                                    <div class="value">10</div>
+                                    <div class="change increase">
+                                        <i class="fas fa-arrow-up"></i>
+                                        1.8% Up from yesterday
+                                    </div>
+                                </div>
+                                <div class="card-icon light-purple">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Order Component -->
+                    <div class="orders-section">
+                        <div class="section-header">
+                            <h2>Latest Orders</h2>
+                            <div class="dropdown">
+                                <button class="dropdown-toggles">
+                                    October
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="orders-table">
+                            <div class="table-header">
+                                <div class="header-cell gig-cell">Gig</div>
+                                <div class="header-cell profit-cell">Profit</div>
+                                <div class="header-cell date-cell">Delivery Date</div>
+                                <div class="header-cell status-cell">Status</div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e8f0fe;">
+                                            <img src="asset/Image.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">$90.00</div>
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge delivered">Delivered</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #f8e4ff;">
+                                            <img src="asset/Image2.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">$90.00</div>
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge pending">Pending</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e0f7fa;">
+                                            <img src="asset/Image3.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">$90.00</div>
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge rejected">Rejected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Order Tab Content -->
+                <div class="tab-content " id="orders-content">
+                    <!-- Header Component -->
+                    <div class="header-section">
+                        <div class="welcome-info">
+                            <h1>Orders</h1>
+                            <div class="bread-crumb">
+                                <div class="bread-crumb-item">
+                                    <span>Home</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>My dashboard</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>Orders</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">Switch to buying</button>
+                        </div>
+                    </div>
+
+                    <!-- Order Component -->
+                    <div class="orders-section">
+                        <div class="section-header">
+                            <h2>Latest Orders</h2>
+                            <div class="dropdown">
+                                <button class="dropdown-toggles">
+                                    October
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="orders-table">
+                            <div class="table-header">
+                                <div class="header-cell gig-cell">Gig</div>
+                                <div class="header-cell profit-cell">Profit</div>
+                                <div class="header-cell option-cell">Options</div>
+                                <div class="header-cell date-cell">Delivery Date</div>
+                                <div class="header-cell status-cell">Status</div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e8f0fe;">
+                                            <img src="asset/Image.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">$90.00</div>
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-paperclip"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-list-ul"></i>
+                                    </span>
+
+                                </div>
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge delivered">Delivered</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #f8e4ff;">
+                                            <img src="asset/Image2.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">$90.00</div>
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-paperclip"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-list-ul"></i>
+                                    </span>
+
+                                </div>
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge pending">Pending</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e0f7fa;">
+                                            <img src="asset/Image3.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">$90.00</div>
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-paperclip"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-list-ul"></i>
+                                    </span>
+
+                                </div>
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge rejected">Rejected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Gig Tab Content -->
+                <div class="tab-content " id="gigs-content">
+                    <!-- Header Component -->
+                    <div class="header-section">
+                        <div class="welcome-info">
+                            <h1>Gigs</h1>
+                            <div class="bread-crumb">
+                                <div class="bread-crumb-item">
+                                    <span>Home</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>My dashboard</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>Gigs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">Switch to buying</button>
+                            <button class="btn btn-primary">Create a new gig</button>
+
+                        </div>
+                    </div>
+
+                    <!-- Order Component -->
+                    <div class="orders-section">
+                        <div class="section-header">
+                            <h2>Latest Gigs</h2>
+                            <div class="dropdown">
+                                <button class="dropdown-toggles">
+                                    October
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="orders-table">
+                            <div class="table-header">
+                                <div class="header-cell gig-cell">Gig</div>
+                                <div class="header-cell profit-cell">Price</div>
+                                <div class="header-cell date-cell">Rating</div>
+                                <div class="header-cell profit-cell">Sales</div>
+                                <div class="header-cell profit-cell">Clicks</div>
+                                <div class="header-cell option-cell">Options</div>
+                                <div class="header-cell status-cell">Status</div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e8f0fe;">
+                                            <img src="asset/Image.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">$90.00</div>
+
+                                <div class="cell rating-cell">
+
+                                    <div class="stars">
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star black">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star black">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                    </div>
+
+                                    <p>0 reviews</p>
+
+
+                                </div>
+
+                                <div class="cell profit-cell">105</div>
+
+                                <div class="cell profit-cell">2341</div>
+
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+                                <div class="cell status-cell">
+                                    <span class="status-badge delivered">Delivered</span>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #f8e4ff;">
+                                            <img src="asset/Image2.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">$90.00</div>
+
+                                <div class="cell rating-cell">
+
+                                    <div class="stars">
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star black">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                    </div>
+
+                                    <p>0 reviews</p>
+
+
+                                </div>
+
+                                <div class="cell profit-cell">105</div>
+
+                                <div class="cell profit-cell">2341</div>
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+                                <div class="cell status-cell">
+                                    <span class="status-badge pending">Pending</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e0f7fa;">
+                                            <img src="asset/Image3.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cell profit-cell">$90.00</div>
+
+                                <div class="cell rating-cell">
+
+                                    <div class="stars">
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                    </div>
+
+                                    <p>0 reviews</p>
+
+
+                                </div>
+
+                                <div class="cell profit-cell">105</div>
+
+                                <div class="cell profit-cell">2341</div>
+
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+
+
+                                <div class="cell status-cell">
+                                    <span class="status-badge rejected">Rejected</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Reviews Tab Content -->
+                <div class="tab-content " id="reviews-content">
+                    <!-- Header Component -->
+                    <div class="header-section">
+                        <div class="welcome-info">
+                            <h1>Reviews</h1>
+                            <div class="bread-crumb">
+                                <div class="bread-crumb-item">
+                                    <span>Home</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>My dashboard</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>Reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">Switch to buying</button>
+                        </div>
+                    </div>
+
+                    <!-- Order Component -->
+                    <div class="orders-section">
+                        <div class="section-header">
+                            <h2>Latest Reviews</h2>
+                            <div class="dropdown">
+                                <button class="dropdown-toggles">
+                                    October
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="orders-table">
+                            <div class="table-header">
+                                <div class="header-cell gig-cell">Gig</div>
+                                <div class="header-cell profit-cell">Buyer</div>
+                                <div class="header-cell date-cell">Rating</div>
+                                <div class="header-cell date-cell">Date</div>
+                                <div class="header-cell option-cell">Options</div>
+
+                            </div>
+
+                            <div class="table-row">
+
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e0f7fa;">
+                                            <img src="asset/Image3.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cell profit-cell">Admin</div>
+
+                                <div class="cell rating-cell">
+
+                                    <div class="stars">
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star black">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                    </div>
+
+                                    <p>8 reviews</p>
+
+
+                                </div>
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #f8e4ff;">
+                                            <img src="asset/Image2.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cell profit-cell">Admin</div>
+
+                                <div class="cell rating-cell">
+
+                                    <div class="stars">
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                    </div>
+
+                                    <p>9 reviews</p>
+
+
+                                </div>
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e0f7fa;">
+                                            <img src="asset/Image3.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cell profit-cell">Admin</div>
+
+                                <div class="cell rating-cell">
+
+                                    <div class="stars">
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                        <span class="star yellow">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+
+                                    </div>
+
+                                    <p>0 reviews</p>
+
+
+                                </div>
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Refunds Tab Content -->
+                <div class="tab-content " id="refunds-content">
+                    <!-- Header Component -->
+                    <div class="header-section">
+                        <div class="welcome-info">
+                            <h1>Refunds</h1>
+                            <div class="bread-crumb">
+                                <div class="bread-crumb-item">
+                                    <span>Home</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>My dashboard</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>Refunds</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">Switch to buying</button>
+                        </div>
+                    </div>
+
+                    <!-- Order Component -->
+                    <div class="orders-section">
+                        <div class="section-header">
+                            <h2>Latest Refunds</h2>
+                            <div class="dropdown">
+                                <button class="dropdown-toggles">
+                                    October
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="orders-table">
+                            <div class="table-header">
+                                <div class="header-cell gig-cell">Gig</div>
+                                <div class="header-cell profit-cell">Buyer</div>
+                                <div class="header-cell option-cell">Options</div>
+                                <div class="header-cell date-cell">Delivery Date</div>
+                                <div class="header-cell status-cell">Status</div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e8f0fe;">
+                                            <img src="asset/Image.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">Admin</div>
+
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge delivered">Delivered</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #f8e4ff;">
+                                            <img src="asset/Image2.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">Admin</div>
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge pending">Pending</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell gig-cell">
+                                    <div class="gig-info">
+                                        <div class="gig-avatar" style="background-color: #e0f7fa;">
+                                            <img src="asset/Image3.png" alt="Gig Icon">
+                                        </div>
+                                        <div class="gig-details">
+                                            <div class="gig-title">Do newly launched company promotions</div>
+                                            <div class="gig-category">Web Development</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell profit-cell">Admin</div>
+
+                                <div class="cell option-cell">
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+
+                                    <span class="option-badge">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+
+                                </div>
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+                                <div class="cell status-cell">
+                                    <span class="status-badge rejected">Rejected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Portfolio Tab Content -->
+                <div class="tab-content " id="portfolio-content">
+                    <!-- Header Component -->
+                    <div class="header-section">
+                        <div class="welcome-info">
+                            <h1>Refunds</h1>
+                            <div class="bread-crumb">
+                                <div class="bread-crumb-item">
+                                    <span>Home</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>My dashboard</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>Portfolio</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">Switch to buying</button>
+                        </div>
+                    </div>
+
+                    <!-- portfolio Component -->
+                    <div class="portfolio-section">
+                        <div class="portfolio-grid">
+                            <!-- Portfolio Item 1 -->
+                            <div class="portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://images.unsplash.com/photo-1591017403286-fd8493524e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Design Portfolio 2023">
+                                </div>
+                                <div class="portfolio-info">
+                                    <div>
+                                        <h3 class="portfolio-title">Design Portfolio (2023)</h3>
+                                        <div class="portfolio-meta">
+                                            <span class="status">Active</span>
+                                            <span class="separator">|</span>
+                                            <span class="time">5 Months ago</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="portfolio-actions">
+                                        <button class="action-btn edit-btn">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </button>
+                                        <button class="action-btn delete-btn">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Item 2 -->
+                            <div class="portfolio-item">
+                                
+                                <div class="portfolio-image">
+                                    <img src="https://images.unsplash.com/photo-1508614999368-9260051292e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Design Portfolio 2024">
+                                </div>
+
+                                <div class="portfolio-info">
+                                    <div>
+                                        <h3 class="portfolio-title">Design Portfolio (2024)</h3>
+                                        <div class="portfolio-meta">
+                                            <span class="status">Active</span>
+                                            <span class="separator">|</span>
+                                            <span class="time">5 Months ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-actions">
+                                        <button class="action-btn edit-btn">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </button>
+                                        <button class="action-btn delete-btn">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add New Portfolio Item -->
+                            <div class="portfolio-item add-new">
+                                <div class="add-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- Payouts Tab Content -->
+                <div class="tab-content " id="payouts-content">
+                    <!-- Header Component -->
+                    <div class="header-section">
+                        <div class="welcome-info">
+                            <h1>Payouts</h1>
+                            <div class="bread-crumb">
+                                <div class="bread-crumb-item">
+                                    <span>Home</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>My dashboard</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="bread-crumb-item">
+                                    <span>Payouts</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">Switch to buying</button>
+                        </div>
+                    </div>
+
+                    <!-- Order Component -->
+                    <div class="orders-section">
+                        <div class="section-header">
+                            <h2>Latest Payouts</h2>
+                            <div class="dropdown">
+                                <button class="dropdown-toggles">
+                                    October
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="orders-table">
+                            <div class="table-header">
+                                <div class="header-cell option-cell">Buyer</div>
+                                <div class="header-cell option-cell">Amount</div>
+                                <div class="header-cell date-cell">Date</div>
+                                <div class="header-cell status-cell">Status</div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell option-cell">
+                                    Admin
+                                </div>
+
+                                <div class="cell option-cell">
+
+                                    $100.00
+
+                                </div>
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+
+                                <div class="cell status-cell">
+                                    <span class="status-badge delivered">Delivered</span>
+                                </div>
+
+                            </div>
+
+                            <div class="table-row">
+
+                                <div class="cell option-cell">
+                                    Admin
+                                </div>
+
+                                <div class="cell option-cell">
+
+                                    $100.00
+
+                                </div>
+
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+
+                                <div class="cell status-cell">
+                                    <span class="status-badge pending">Pending</span>
+                                </div>
+
+                            </div>
+
+                            <div class="table-row">
+                                <div class="cell option-cell">
+                                    Admin
+                                </div>
+
+                                <div class="cell option-cell">
+
+                                    $100.00
+
+                                </div>
+
+
+                                <div class="cell date-cell">12.09.2019 - 12.53 PM</div>
+
+
+                                <div class="cell status-cell">
+                                    <span class="status-badge rejected">Rejected</span>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
